@@ -6,9 +6,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include(CTest)
 enable_testing()
 
-find_package(OpenCV REQUIRED COMPONENTS core highgui video videoio xobjdetect)
+find_package(OpenCV REQUIRED COMPONENTS core highgui video videoio xobjdetect    dnn
+)
 
-add_executable(opencvtest pedestrian_detection.cpp)
+add_executable(opencvtest yolo.cpp)
 
 target_include_directories(opencvtest PRIVATE ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(opencvtest PRIVATE ${OpenCV_LIBS})
