@@ -8,7 +8,7 @@ enable_testing()
 
 find_package(OpenCV REQUIRED COMPONENTS core highgui video videoio xobjdetect)
 
-add_executable(opencvtest face_detection.cpp)
+add_executable(opencvtest pedestrian_detection.cpp)
 
 target_include_directories(opencvtest PRIVATE ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(opencvtest PRIVATE ${OpenCV_LIBS})
