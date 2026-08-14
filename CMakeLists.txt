@@ -6,9 +6,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include(CTest)
 enable_testing()
 
-find_package(OpenCV REQUIRED COMPONENTS core highgui)
+find_package(OpenCV REQUIRED COMPONENTS core highgui video videoio)
 
-add_executable(opencvtest image_segmentation.cpp)
+add_executable(opencvtest morphological_operation.cpp)
 
 target_include_directories(opencvtest PRIVATE ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(opencvtest PRIVATE ${OpenCV_LIBS})
