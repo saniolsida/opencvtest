@@ -6,7 +6,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include(CTest)
 enable_testing()
 
-find_package(OpenCV REQUIRED COMPONENTS core highgui video videoio)
+find_package(OpenCV REQUIRED COMPONENTS core highgui video videoio xobjdetect)
 
 add_executable(opencvtest face_detection.cpp)
 
