@@ -8,7 +8,7 @@ enable_testing()
 
 find_package(OpenCV REQUIRED COMPONENTS core highgui)
 
-add_executable(opencvtest color_processing.cpp)
+add_executable(opencvtest image_segmentation.cpp)
 
 target_include_directories(opencvtest PRIVATE ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(opencvtest PRIVATE ${OpenCV_LIBS})
