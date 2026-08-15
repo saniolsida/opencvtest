@@ -6,10 +6,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 include(CTest)
 enable_testing()
 
-find_package(OpenCV REQUIRED COMPONENTS core highgui video videoio xobjdetect    dnn
+find_package(OpenCV REQUIRED COMPONENTS core highgui video videoio xobjdetect    dnn imgproc
 )
 
-add_executable(opencvtest tracking.cpp)
+add_executable(opencvtest image_feature.cpp)
 
 target_include_directories(opencvtest PRIVATE ${OpenCV_INCLUDE_DIRS})
 target_link_libraries(opencvtest PRIVATE ${OpenCV_LIBS})
